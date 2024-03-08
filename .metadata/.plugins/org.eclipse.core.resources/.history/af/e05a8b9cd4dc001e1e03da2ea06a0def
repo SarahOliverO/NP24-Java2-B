@@ -1,0 +1,12 @@
+package br.com.senaisp.bauru.sarah.secao03;
+
+public class Chickens01 {
+    public static void main(String[] args) {
+        //Put yout code here
+    	//eggsPerChicken = 5, checkenCount = 3
+    	//eggsPerChicken = 4, checkenCount = 8
+    
+    	
+        System.out.println(totalEggs);
+    }   
+}
