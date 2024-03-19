@@ -1,0 +1,10 @@
+package br.com.senaisp.bauru.sarah.secao04;
+
+public class ConversaoTipos01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
