@@ -1,0 +1,14 @@
+package br.com.senaisp.bauru.sarah.secao05;
+
+import javax.swing.JOptionPane;
+
+public class ExercioPratico {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String msg01 = JOptionPane.showConfirmDialog(null, "Você está preparado?", "Digite algo aqui.", JOptionPane.INFORMATION_MESSAGE, null, null, "Diga sim ou não.");
+
+				
+	}
+
+}
