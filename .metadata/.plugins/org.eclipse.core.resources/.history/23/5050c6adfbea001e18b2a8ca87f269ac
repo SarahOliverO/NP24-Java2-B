@@ -1,0 +1,15 @@
+package br.com.senaisp.bauru.sarah.licao05.exercico;
+
+import java.util.Scanner;
+
+public class Exemplo02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int dia, mes, ano;
+		Scanner sc = new Scanner(System.in);
+		boolean bDataValida = false;
+		
+	}
+
+}
