@@ -1,0 +1,15 @@
+package br.com.senaisp.bauru.sarah.licao06.lacowhile;
+
+public class TesteSenha {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int senha;
+		int tentativas = 0;
+		final int PASSWORD = 1597;
+		do {
+			
+		} while(senha!=PASSWORD && tentativas<3)
+	}
+
+}
