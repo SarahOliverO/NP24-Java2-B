@@ -1,0 +1,10 @@
+package br.com.senaisp.bauru.sarah.licao07.exercicio;
+
+public class TesteJogo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

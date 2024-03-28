@@ -1,0 +1,42 @@
+package br.com.senaisp.bauru.sarah.licao07.exemplos;
+
+public class ContaBancaria {
+	//Fields
+	private int agencia;
+	private int banco;
+	private int numeroConta;
+	private double saldo;
+	//Constructor
+	public ContaBancaria() {
+		banco = 123;
+		agencia = 1;
+		numeroConta = 0;
+		saldo = 50;
+	}
+	//Métodos
+	public int getAgencia() {
+		return agencia;
+	}
+	public void setAgencia(int agencia) {
+		this.agencia = agencia;
+	}
+	public int getBanco() {
+		return banco;
+	}
+	public void setBanco(int banco) {
+		this.banco = banco;
+	}
+	public int getNumeroConta() {
+		return numeroConta;
+	}
+	public void setNumeroConta(int numeroConta) {
+		this.numeroConta = numeroConta;
+	}
+	public double getSaldo() {
+		return saldo;
+	}
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+	
+}

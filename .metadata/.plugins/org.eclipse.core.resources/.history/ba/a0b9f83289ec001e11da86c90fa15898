@@ -1,0 +1,14 @@
+package br.com.senaisp.bauru.sarah.licao07.exemplos;
+
+public class Exemplo01 {
+
+	public static void main(String[] args) {
+		ContaBancaria c1 = new ContaBancaria();
+		c1.agencia = 1900;
+		c1.banco = 341;
+		c1.numeroConta = 12345;
+		c1.saldo = -10;
+		System.out.println(c1);
+	}
+
+}
