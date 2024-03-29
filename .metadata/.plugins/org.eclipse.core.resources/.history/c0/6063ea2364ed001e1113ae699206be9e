@@ -1,0 +1,9 @@
+package br.com.senaisp.bauru.sarah.licao08.exemplos;
+
+public class VetoresExemplo01 {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package br.com.senaisp.bauru.sarah.licao08.exemplos;
+
+public class VetoresExemplo01 {
+
+	public static void main(String[] args) {
+		//Criando um vetor de 50 posições inteiras
+		int[] idades = new int[50];
+		//Criando de forma estática vetores com o tamanho 4
+		String[] cores = {"Azul", "Amarelo", "Vermelho", "Verde"};
+		
+	}
+
+}

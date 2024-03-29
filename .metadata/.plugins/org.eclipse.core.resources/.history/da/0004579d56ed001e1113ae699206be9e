@@ -1,0 +1,69 @@
+package br.com.senaisp.bauru.sarah.licao07.exercicio;
+
+public class Terminal {
+	private static int nId = 0;
+	private CategoriaPremio categoria01;
+	private CategoriaPremio categoria02;
+	private CategoriaPremio categoria03;
+	private int numeroTerminal;
+	//Constructor
+	public Terminal() {
+		numeroTerminal = ++nId;
+		categoria01 = new CategoriaPremio("Gold", 25);
+		categoria02 = new CategoriaPremio("Silver", 50);
+		categoria03 = new CategoriaPremio("Bronze", 75);
+	}
+	//Getters e Setters
+	public CategoriaPremio getCategoria01() {
+		return categoria01;
+	}
+	public CategoriaPremio getCategoria02() {
+		return categoria02;
+	}
+	public CategoriaPremio getCategoria03() {
+		return categoria03;
+	}
+	public int getNumeroTerminal() {
+		return numeroTerminal;
+	}
+	//Métodos
+	public void consultarSaldoCartao(Cartao ct) {
+		System.out.println("Operação: Saldo do Cartão");
+		System.out.println("-".repeat(20));
+		System.out.println(ct);
+		System.out.println("-".repeat(29));
+	}
+	
+	public void carregarCartao(Cartao ct, int valor) {
+		System.out.println("Operação: Carregar saldo cartão");
+		System.out.println("-".repeat(20));
+		int nrCreditos = valor * 2;
+		//Atribuindo os créditos
+		ct.setCredito(ct.getCredito() + nrCreditos);
+		//Mostrando o saldo cartão
+		System.out.println(ct);
+		System.out.println("-".repeat(20));
+	}
+	
+	public void transferirCreditos(Cartao ori, Cartao des, int qtde) {
+		System.out.println("Operação: Tranferência de Créditos");
+		System.out.println("-".repeat(20));
+		//teste de qualidade
+		if (ori.getCredito()>=qtde && qtde>0) { //posso trocar
+			int vlr = ori.getCredito() - qtde;
+			ori.setCredito(vlr);
+			des.setCredito(des.getCredito() + qtde);
+		} else {
+			System.out.println("Créditos insuficientes ou qtde zero!");
+		}
+		//Mostrando os saldos
+		System.out.println("Cartão Origem:");
+		System.out.println(ori);
+		System.out.println("Cartão Destino:");
+		System.out.println(des);
+		System.out.println("-".repeat(20));
+	}
+	public void transferirCreditos(Cartao ori, Cartao des) {
+		
+	}
+}

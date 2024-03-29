@@ -1,0 +1,9 @@
+package br.com.senaisp.bauru.sarah.licao07.exercicio;
+
+public class Terminal {
+	private static int nId = 0;
+	private CategoriaPremio categoria01;
+	private CategoriaPremio categoria02;
+	private CategoriaPremio categoria03;
+	
+}

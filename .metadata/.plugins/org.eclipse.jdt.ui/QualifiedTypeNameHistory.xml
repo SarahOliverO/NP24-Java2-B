@@ -9,5 +9,9 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="br.com.senaisp.bauru.sarah.licao07.exemplos.ContaBancaria"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="javax.annotation.processing.SupportedSourceVersion"/>
+    <fullyQualifiedTypeName name="br.com.senaisp.bauru.sarah.licao07.exercicio.Terminal"/>
+    <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthOptionPaneUI"/>
+    <fullyQualifiedTypeName name="br.com.senaisp.bauru.sarah.licao07.exercicio.CategoriaPremio"/>
     <fullyQualifiedTypeName name="br.com.senaisp.bauru.sarah.licao07.exercicio.MaquinaFliperama"/>
 </qualifiedTypeNameHistroy>
