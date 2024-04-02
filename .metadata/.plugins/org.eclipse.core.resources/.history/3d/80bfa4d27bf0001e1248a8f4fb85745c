@@ -1,0 +1,18 @@
+package br.com.senaisp.bauru.sarah.licao08.exercicio;
+
+public class Baralho {
+	private Carta[] bar;
+	private Random rnd;
+	
+	public Baralho() {
+		bar = new Carta[52];
+		rnd = new Random();
+		//Montagem do baralho
+		for (int np=0;np<4;np++) {
+			for (int nm=0;nm<13;nm++) {
+				//Criando a carta
+				bar[np*13+nm] = new Carta(np,nm);
+			}
+		}
+	}
+}
