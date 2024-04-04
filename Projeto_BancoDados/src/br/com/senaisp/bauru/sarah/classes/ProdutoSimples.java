@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.naming.spi.DirStateFactory.Result;
+
 public class ProdutoSimples {
 	private int id;
 	private String descricao;
@@ -20,7 +22,7 @@ public class ProdutoSimples {
 		saldo = 0;
 		custo = 0;
 		//Instanciar o DriverManager
-		conn = DriverManager.getConnection("jdbc:sqlite:C:\\Javalibs\\dados\\NP24_JAVA2_B.DB");
+		conn = DriverManager.getConnection("jdbc:sqlite:C:\\Javalibs\\dados\\NP24_JAVA2_B");
 	}
 	//Gettes e setters
 	public int getId() {
@@ -51,6 +53,34 @@ public class ProdutoSimples {
 		this.custo = custo;
 	}
 	//
+	@Override
+	public String toString() {
+		return "Id: " + getId()+ "\n"+
+				"Descrição: " + getDescricao() + "\n"+
+				"Saldo: " + getSaldo() + "\n"+
+				"Custo: " + getCusto();
+	}
+	//
+	public void gravar() throws SQLException {
+		PreparedStatement stmt = conn.prepareStatement("update produto set descricao=?, saldo=?, custo=? where id = ?");
+		//preenchendo os parametros
+		stmt.setString(1, getDescricao());
+		stmt.setInt(2, getSaldo());
+		stmt.setDouble(3, getCusto());
+		stmt.setInt(4, getId());
+		//Disparando a query
+		int nRegs = stmt.executeUpdate();
+		System.out.println(nRegs + "registro(s) afetado(s)!");
+	}
+	public void apagar() throws SQLException {
+		PreparedStatement stmt = conn.prepareStatement("delete from produto where id = ?");
+		//preenchendo os parametros
+		stmt.setInt(1, getId());
+		//Disparando a query
+		int nRegs = stmt.executeUpdate();
+		System.out.println(nRegs + "registro(s) afetado(s)!");
+	}
+	//
 	public static ProdutoSimples create(String des, int sal, double cus) throws SQLException {
 		ProdutoSimples ret = new ProdutoSimples();
 		//Setando os valores
@@ -77,4 +107,29 @@ public class ProdutoSimples {
 		//
 		return ret;
 	}
+
+	public static ProdutoSimples findByPK(int cod) throws Exception {
+		ProdutoSimples ret = new ProdutoSimples();
+		if (cod>0) {
+			//Preparando a instrução do select
+			PreparedStatement stmt = ret.conn.prepareStatement("select id, descricao,saldo, custo from produto where id = ?");
+			//Colocando o parametro da query
+			stmt.setInt(1, cod);
+			//Executando a query
+			ResultSet rs = stmt.executeQuery();
+			//Verificando se encontrou algo
+			if (rs.next()) {
+				ret.setId(rs.getInt(1));
+				ret.setDescricao(rs.getString(2));
+				ret.setSaldo(rs.getInt(3));
+				ret.setCusto(rs.getDouble(4));
+			} else {
+				throw new Exception("Registro não encontrado!");			}
+		} else {
+			throw new Exception("O código deve ser maior que zero!");
+		}
+		return ret;
+	}
+	
 }
+

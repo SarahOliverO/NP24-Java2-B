@@ -1,8 +1,0 @@
-package br.com.senaisp.bauru.sarah.licao07.exercicio;
-
-public class MaquinaFliperama {
-	private Random rnd;
-	private int custoCredito;
-	private String nomeJogo;
-	
-}
