@@ -22,7 +22,7 @@ public class ProdutoSimples {
 		saldo = 0;
 		custo = 0;
 		//Instanciar o DriverManager
-		conn = DriverManager.getConnection("jdbc:sqlite:C:\\Javalibs\\dados\\NP24_JAVA2_B");
+		conn = ConexaoBD.getInstancia().getConn();
 	}
 	//Gettes e setters
 	public int getId() {
