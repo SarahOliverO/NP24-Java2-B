@@ -12,6 +12,7 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="null"/>
 			<item value=""/>
 		</list>
 		<list key="replacehistory">
