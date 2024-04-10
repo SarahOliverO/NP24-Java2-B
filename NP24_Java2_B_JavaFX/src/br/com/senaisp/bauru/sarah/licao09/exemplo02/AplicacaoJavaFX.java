@@ -4,6 +4,9 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.paint.Color;
@@ -14,6 +17,7 @@ import javafx.scene.shape.StrokeType;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 public class AplicacaoJavaFX extends Application {
@@ -63,6 +67,9 @@ public class AplicacaoJavaFX extends Application {
 		//Adicionar o rectangle ao nó root
 		root.getChildren().add(rec);
 		//Adicionando o texto
+		DropShadow ds = new DropShadow();
+		ds.setColor(Color.BLACK);
+		
 		Text txt = new Text("Dorm 6:\n200");
 		txt.setFont(Font.font("Verdana",FontWeight.BOLD, 30));
 		txt.setFill(Color.RED);
@@ -73,8 +80,24 @@ public class AplicacaoJavaFX extends Application {
 		txt.setStrokeType(StrokeType.OUTSIDE);
 		txt.setStrokeLineCap(StrokeLineCap.ROUND);
 		txt.setStrokeLineJoin(StrokeLineJoin.ROUND);
+		txt.setTextAlignment(TextAlignment.CENTER);
+		//Aplicando o efeito
+		txt.setEffect(ds);
 		//Adicionando ao nó root
 		root.getChildren().add(txt);
+		//Criando o objeto image
+		Image img = new Image(getClass().getResource("Images/Duke.png").toString());
+		//Criando o visualizador de imagens 
+		ImageView imgVw = new ImageView(img);
+		//Dimensionando o tamanho da visualização da imagem
+		imgVw.setFitWidth(100);
+		//Faz com que a imagem não distorça
+		imgVw.setPreserveRatio(true);
+		//Posicionando o visualizado
+		imgVw.setLayoutX(450);
+		imgVw.setLayoutY(100);
+		//Colocando no nó root
+		root.getChildren().add(imgVw);
 	}
 
 	public static void main(String[] args) {
