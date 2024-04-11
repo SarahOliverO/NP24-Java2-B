@@ -1,18 +1,10 @@
 INDEX VERSION 1.131+C:\Java2-Projetos\SarahOliveira\.metadata\.plugins\org.eclipse.jdt.core
 1972523974.index
 4248679884.index
-643393787.index
 2167742439.index
 210813594.index
 4205867115.index
-1687797382.index
-3483596675.index
+770835644.index
 1865797976.index
-2061329853.index
-3969861322.index
-2302278007.index
-3656596875.index
 2806523606.index
-1380391733.index
-1167150503.index
 2355782771.index
